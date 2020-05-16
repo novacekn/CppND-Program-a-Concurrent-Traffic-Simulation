@@ -25,7 +25,7 @@ public:
     T receive();
 
 private:
-    std::deque<TrafficLightPhase> _queue;
+    std::deque<T> _queue;
     std::condition_variable _cv;
     std::mutex _mut;
 };
@@ -40,6 +40,7 @@ class TrafficLight : public TrafficObject
 {
 public:
     // constructor / desctructor
+    TrafficLight();
 
     // getters / setters
 
